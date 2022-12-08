@@ -5,77 +5,123 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <title>Granda</title>
     <style>
-        * {
-            margin: 0 auto;
-            padding: 0px;
-            box-sizing: border-box;
-        }
+        :root {
+            --branding-color: #000000;
+            --second-color: #121210;
+            --state-color: #8a2525;
 
-        header {
-            width: 100%;
-            height: 75px;
-            line-height: 75px;
-            padding: 0px 100px;
-            position: fixed;
-        }
 
-        header .logo p {
-            font-size: 30px;
-            font-weight: bold;
-            float: left;
-            color: black;
-            letter-spacing: 1.5px;
+            --default-font-family: "Cairo", sans-serif;
         }
 
 
-        header .logo a {
-            float: left;
-        }
-
-        header ul {
-            float: right;
-
-        }
-
-        header li {
-            display: inline-block;
+        nav li {
+            display: inline;
             list-style: none;
-
-
+            line-height: 60px;
+            margin-left: 15px;
+            font-size: 15px;
         }
 
-        header li a {
-            font-size: 18px;
-            text-transform: uppercase;
-            padding: 0 30px;
+        nav {
+            padding-bottom: 10px;
+        }
+
+        nav a:hover {
+            color: var(--state-color);
+            font-weight: 700;
+        }
+
+        .logo {
+            padding-top: 10px;
+            max-height: 60px;
+        }
+
+        nav {
+            padding: 30px 0;
+        }
+
+        nav ul {
+            margin: 0;
+            padding: 0;
+        }
+
+        nav li {
+            display: inline;
+            list-style: none;
+            line-height: 70px;
+            margin-left: 15px;
+            font-size: 20px;
+        }
+
+        nav a {
             text-decoration: none;
-            color: black;
+            color: var(--third-color);
+            transition: all 100ms ease-in-out;
+            font: var(--default-font-family);
         }
 
-        header li a:hover {
-            transition: all 0.4s se 0s;
-            color: red;
+
+        .granda {
+            max-height: 600px;
+            transform: rotate(-4deg);
         }
     </style>
 </head>
 
 <body>
-    <header>
-        <div class="logo">
-            <a href="#"><img src="" alt=""></a>
-            <p>Granda</p>
+    <div class="container">
+        <nav class="d-flex justify-content-between">
+            <a href="#" title="Homepage">
+                <img src="#" class="logo d-none d-md-block" alt="Granda-logo" />
+
+            </a>
+            <ul>
+                <li>
+                <li class="active">
+                    <a href="#" title="Homepage">Home</a>
+                </li>
+                </li>
+                <li>
+                    <a href="#" title="Granda Goals">Goals</a>
+                </li>
+
+                <li>
+                    <a href="#" title="Contact me">Care</a>
+                </li>
+                <li>
+                    <a href="#" title="Care for others">Care</a>
+                </li>
+
+
+            </ul>
+        </nav>
+    </div>
+
+
+    <div class="content-container container">
+        <div class="section-one">
+            <div class="row">
+                <div class="col-lg-6 mt-4">
+                    <h2 class="mt-4">Woof! ✌</h2>
+                    <h2 class="mt-4">My name is Granda and I am a
+                        3 year old rescued dog.
+                    </h2>
+                    <h2 class="mt-4">My skills :</h2>
+
+
+                </div>
+                <div class="col-lg-6 ">
+                    <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/057/169/original/IMG_2008.JPG?1670513033"
+                        class="img-fluid mt-4 rounded mx-auto granda d-none d-lg-block" alt="Granda-polaroid" />
+                </div>
+            </div>
         </div>
-
-        <ul class="navigation">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Goals</a></li>
-            <li><a href="#">Care</a></li>
-            <li><a href="#">Contact</a></li>
-
-        </ul>
-    </header>
+    </div>
 
 </body>
 
