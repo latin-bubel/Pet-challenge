@@ -5,19 +5,39 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/f3522b3cd9.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <title>Granda</title>
     <style>
         :root {
             --branding-color: #000000;
             --second-color: #121210;
-            --state-color: #8a2525;
-
+            --state-color: #ea1010;
+            /* hover color */
+            --background-color-dark: #FFF7D8;
+            --background-color-light: #fefefe;
 
             --default-font-family: "Cairo", sans-serif;
         }
 
+        body {
+            background: var(--background-color-dark);
+        }
+
+        .section-light {
+            background-color: var(--background-color-light);
+            margin: 0 auto;
+        }
+
+        .section-dark {
+            background-color: var(--background-color-dark);
+            margin: 0 auto;
+        }
+
+        .section-dark-navigation {
+            background-color: var(--background-color-dark);
+        }
 
         nav li {
             display: inline;
@@ -43,6 +63,8 @@
 
         nav {
             padding: 30px 0;
+
+
         }
 
         nav ul {
@@ -60,9 +82,9 @@
 
         nav a {
             text-decoration: none;
-            color: var(--third-color);
+            color: var(--branding-color);
             transition: all 100ms ease-in-out;
-            font: var(--default-font-family);
+            /* font: var(--default-font-family); */
         }
 
 
@@ -70,58 +92,242 @@
             max-height: 600px;
             transform: rotate(-4deg);
         }
+
+        .estera-img,
+        .goals-img {
+            max-height: 400px;
+            transform: rotate(4deg);
+            display: flex;
+        }
+
+        .border-text,
+        .border-text1,
+        .border-text2 {
+            border-width: 4px;
+            border-style: solid;
+            border-radius: 30px;
+            border-color: #fa2c2c;
+            font-size: 18px;
+            font-weight: 600;
+        }
+
+        .border-text {
+            padding: 7px 50px;
+        }
+
+        .border-text1 {
+            padding: 7px 30px;
+        }
+
+        .border-text2 {
+            padding: 7px 60px;
+        }
+
+        .margin-left {
+            margin-left: 20px;
+        }
+
+        .margin-left2 {
+            margin-left: 60px;
+        }
+
+        .margin-left3 {
+            margin-left: 40px;
+        }
+
+        .btn-branding {
+            background: var(--state-color);
+            border-radius: 30px;
+            color: rgb(255, 255, 255);
+
+            line-height: 28px;
+            padding: 10px 20px;
+            font: var(--default-font-family);
+            font-size: 18px;
+            font-weight: 600;
+
+        }
+
+        footer .social-links a {
+            margin: 0px 20px;
+            color: rgb(0, 0, 0);
+            padding: 10px 14px;
+            font-size: 40px;
+            border-radius: 50%;
+            transition: all 100ms ease-in-out;
+
+        }
+
+        footer p {
+            font-size: 18px;
+            font-weight: 400;
+        }
+
+        footer .social-links a:hover {
+            color: #00000093;
+        }
     </style>
 </head>
 
 <body>
-    <div class="container">
-        <nav class="d-flex justify-content-between">
-            <a href="#" title="Homepage">
-                <img src="#" class="logo d-none d-md-block" alt="Granda-logo" />
+    <div class="section-dark-navigation">
+        <div class="container">
+            <nav class="d-flex justify-content-between">
+                <a href="#" title="Homepage">
+                    <img src="#" class="logo d-none d-md-block" alt="Granda-logo" />
 
-            </a>
-            <ul>
-                <li>
-                <li class="active">
-                    <a href="#" title="Homepage">Home</a>
-                </li>
-                </li>
-                <li>
-                    <a href="#" title="Granda Goals">Goals</a>
-                </li>
+                </a>
+                <ul>
+                    <li>
+                    <li class="active">
+                        <a href="#" title="Homepage">Home</a>
+                    </li>
+                    </li>
+                    <li>
+                        <a href="#" title="Granda Goals">Goals</a>
+                    </li>
 
-                <li>
-                    <a href="#" title="Contact me">Care</a>
-                </li>
-                <li>
-                    <a href="#" title="Care for others">Care</a>
-                </li>
+                    <li>
+                        <a href="#" title="Contact me">Care</a>
+                    </li>
+                    <li>
+                        <a href="#" title="Care for others">Care</a>
+                    </li>
 
 
-            </ul>
-        </nav>
+                </ul>
+            </nav>
+        </div>
     </div>
 
-
-    <div class="content-container container">
-        <div class="section-one">
+    <div class="section-dark">
+        <div class="content-container container">
             <div class="row">
                 <div class="col-lg-6 mt-4">
                     <h2 class="mt-4">Woof! ✌</h2>
                     <h2 class="mt-4">My name is Granda and I am a
-                        3 year old rescued dog.
+                        3 year old rescue dog.
                     </h2>
-                    <h2 class="mt-4">My skills :</h2>
-
-
+                    <h2 class="mt-5">My skills :</h2>
+                    <div class="mt-5 ">
+                        <span class="border-text1 margin-left">super friendly</span>
+                        <span class="border-text margin-left3">mid-air ball catcher</span>
+                    </div>
+                    <div class="mt-5">
+                        <span class="border-text1 margin-left2">record sleeper</span>
+                        <span class="border-text margin-left">faster than light</span>
+                    </div>
+                    <div class="mt-5">
+                        <span class="border-text margin-left">traveller</span>
+                        <span class="border-text2 margin-left">acrobat</span>
+                    </div>
                 </div>
                 <div class="col-lg-6 ">
                     <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/057/169/original/IMG_2008.JPG?1670513033"
                         class="img-fluid mt-4 rounded mx-auto granda d-none d-lg-block" alt="Granda-polaroid" />
                 </div>
+
             </div>
         </div>
     </div>
+
+
+    <div class="section-light">
+        <div class="content-container container">
+            <div class="row">
+                <div class="col-lg-6 mt-1 mb-5">
+                    <div class="col-lg-6 mx-auto">
+                        <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/057/214/original/Projekt-bez-tytulu-%281%29-transformed.png?1670522969"
+                            class="img-fluid mt-5 rounded mx-auto estera-img d-none d-lg-block" alt="Estera-polaroid" />
+                    </div>
+                </div>
+                <div class="col-lg-6 mt-5 ">
+                    <h2 class="mt-5 tex-center"> </br></br>This is my human, her name is
+                        Estera. </br>
+                        She feeds me with my favorite treats
+                        and plays with me. She’s OK.
+                    </h2>
+                    <div class="text-center ">
+                        <a href="https://pl.linkedin.com/in/estera-pietkiewicz-6b7558178?original_referer=https%3A%2F%2Fwww.google.com%2F"
+                            class="btn btn-branding mt-3 " target="_blank" title="Estera - Linkedin">Linkedin</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="section-dark">
+            <div class="content-container container">
+                <div class="row mt-4 mb-4">
+                    <h2 class="mt-4 text-center">My goals for the future are clear...</h2>
+                    <div class="col-lg-4 mb-4">
+                        <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/057/221/original/Projekt-bez-tytulu-%283%29-transformed.png?1670525899"
+                            class="img-fluid mt-4 rounded mx-auto goals d-none d-lg-block" alt="Food" />
+                        <h2 class="mt-4 text-center">... more food</h2>
+                    </div>
+                    <div class="col-lg-4 mt-4">
+                        <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/057/222/original/Projekt-bez-tytulu-%282%29-transformed.png?1670526091"
+                            class="img-fluid mt-4 rounded mx-auto goals d-none d-lg-block" alt="Toys" />
+                        <h2 class="mt-4 text-center">... more toys</h2>
+
+                    </div>
+                    <div class="col-lg-4 mt-4">
+                        <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/057/226/original/1.png?1670526453"
+                            class="img-fluid mt-4 rounded mx-auto goals d-none d-lg-block" alt="Friends" />
+                        <h2 class="mt-4 text-center">... more friends</h2>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section-light">
+            <div class="content-container container">
+                <div class="row mt-4">
+                    <div class="col-lg-6 mt-1 mb-5">
+                        <div class="col-lg-6 mx-auto">
+                            <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/057/229/original/Projekt-bez-tytulu-%286%29-transformed.png?1670526681"
+                                class="img-fluid mt-5 rounded mx-auto granda d-none d-lg-block" alt="Cloud-granda" />
+                        </div>
+                    </div>
+                    <div class="col-lg-6 mt-5 ">
+                        <h2 class="mt-5 tex-center"> </br></br>This is my human, her name is
+                            Estera. </br>
+                            She feeds me with my favorite treats
+                            and plays with me. She’s OK.
+                        </h2>
+                        <div class="text-center ">
+                            <a href="https://pl.linkedin.com/in/estera-pietkiewicz-6b7558178?original_referer=https%3A%2F%2Fwww.google.com%2F"
+                                class="btn btn-branding mt-3 " target="_blank" title="Estera - Linkedin">Linkedin</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-dark ">
+                <footer>
+
+                    <div class="social-links d-flex justify-content-center mb-1 mt-3">
+                        <a href="https://instagram.com/esterapietkiewicz?igshid=YmMyMTA2M2Y=" target="_blank"
+                            title="Instagram Estera">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a href="https://pl.linkedin.com/in/estera-pietkiewicz-6b7558178?original_referer=https%3A%2F%2Fwww.google.com%2F"
+                            target="_blank" title="Linkedin Estera">
+                            <i class="fa-brands fa-linkedin"></i>
+                        </a>
+                        <a href="https://github.com/latin-bubel" target="_blank" title="Github Estera">
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+                    </div>
+                    <p class="text-center mt-2 mb-4">
+                        Coded by Estera, this project is <a href="https://github.com/latin-bubel/portfolio_final"
+                            title="Github repository" target="_blank">open-sourced</a> ✨</br>
+                        © 2022 Estera Pietkiewicz
+                    </p>
+                </footer>
+            </div>
+
 
 </body>
 
