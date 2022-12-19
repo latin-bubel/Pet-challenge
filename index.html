@@ -125,44 +125,9 @@
             display: flex;
         }
 
-        .border-text,
-        .border-text1,
-        .border-text2 {
-            border-width: 4px;
-            border-style: solid;
-            border-radius: 30px;
-            border-color: #fa2c2c;
-            font-size: 22px;
-            font-weight: 400;
-        }
 
-        .border-text {
-            padding: 7px 50px;
-        }
 
-        .border-text1 {
-            padding: 7px 30px;
-        }
 
-        .border-text2 {
-            padding: 7px 60px;
-        }
-
-        .margin-left {
-            margin-left: 10px;
-        }
-
-        .margin-left2 {
-            margin-left: 70px;
-        }
-
-        .margin-left3 {
-            margin-left: 40px;
-        }
-
-        .margin-left4 {
-            margin-left: 90px;
-        }
 
         .btn-branding {
             background: var(--state-color);
@@ -176,6 +141,25 @@
             font-weight: 400;
 
         }
+
+
+        .btn-outline-danger,
+        .btn-outline-danger:hover,
+        .btn-outline-danger:active,
+        .btn-outline-danger:focus {
+            padding-left: 30px;
+            padding-right: 30px;
+            color: rgb(0, 0, 0);
+            background-color: transparent;
+            border-color: var(--state-color);
+            border-radius: 40px;
+            border-width: 3px;
+            box-shadow: none !important;
+            outline: 0;
+        }
+
+        /* changed bootstrap default behavior of button update*/
+
 
         footer .social-links a {
             margin: 30px 30px 0 0;
@@ -204,10 +188,6 @@
 
             }
 
-            .margin-left4,
-            .margin-left3 {
-                margin-left: 4px;
-            }
 
             nav li {
                 display: inline;
@@ -225,7 +205,39 @@
                 max-height: 600px;
             }
 
+            .buttons {
+                text-align: center;
+            }
 
+
+        }
+
+        @media (max-width: 1400px) {
+
+            .btn-outline-danger {
+                padding-left: 11px;
+                padding-right: 11px;
+                font-size: 20px;
+
+
+            }
+        }
+
+        @media (max-width: 442px) {
+
+            .btn-outline-danger {
+                padding-left: 8px;
+                padding-right: 8px;
+                font-size: 15px;
+            }
+
+            nav li {
+                display: inline;
+                list-style: none;
+                line-height: 60px;
+                margin-left: 15px;
+                font-size: 18px;
+            }
 
         }
     </style>
@@ -237,7 +249,7 @@
             <nav class="d-flex justify-content-between" id="home">
                 <a href="#home" title="Homepage">
                     <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/057/243/original/IMG_2009-removebg-preview.png?1670531093"
-                        class="logo d-none logo d-md-block" alt="Granda-logo" />
+                        class="logo d-none logo d-sm-block" alt="Granda-logo" />
 
                 </a>
                 <ul>
@@ -271,23 +283,29 @@
                     <h2 class="mt-4">My name is Granda and I am a
                         3 year old rescue dog.
                     </h2>
-                    <h2 class="mt-5">My skills :</h2>
-                    <div class="mt-5 ">
-                        <span class="border-text1 margin-left">super friendly</span>
-                        <span class="border-text margin-left3">mid-air ball catcher</span>
+                    <h2 class="mt-5 ">My skills :</h2>
+
+                    <div class="mt-4 ">
+                        <button type="button" class="btn btn-outline-danger ms-1 me-4">super friendly</button>
+                        <button type="button" class="btn btn-outline-danger ms-3 ">traveller</button>
+
                     </div>
-                    <div class="mt-5">
-                        <span class="border-text1 margin-left4">record sleeper</span>
-                        <span class="border-text margin-left3">faster than light</span>
+                    <div class="mt-4">
+                        <button type="button" class="btn btn-outline-danger ms-5 me-3">acrobat</button>
+                        <button type="button" class="btn btn-outline-danger ms-1 ">faster than light</button>
+
                     </div>
-                    <div class="mt-5">
-                        <span class="border-text margin-left">traveller</span>
-                        <span class="border-text2 margin-left2">acrobat</span>
+                    <div class="mt-4">
+                        <button type="button" class="btn btn-outline-danger ms-1 me-3">record sleeper</button>
+                        <button type="button" class="btn btn-outline-danger ms-3">mid-air ball catcher</button>
+
+
+
                     </div>
                 </div>
                 <div class="col-lg-6 ">
                     <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/057/169/original/IMG_2008.JPG?1670513033"
-                        class="img-fluid mt-4 rounded mx-auto granda d-none d-md-block" alt="Granda-polaroid" />
+                        class="img-fluid mt-4 rounded mx-auto granda  d-sm-block" alt="Granda-polaroid" />
                 </div>
 
             </div>
@@ -301,7 +319,7 @@
                 <div class="col-lg-6 mt-1 mb-5">
                     <div class="col-lg-6 mx-auto">
                         <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/057/214/original/Projekt-bez-tytulu-%281%29-transformed.png?1670522969"
-                            class="img-fluid mt-5 rounded mx-auto estera-img d-none d-md-block" alt="Estera-polaroid" />
+                            class="img-fluid mt-5 rounded mx-auto estera-img  d-sm-block" alt="Estera-polaroid" />
                     </div>
                 </div>
                 <div class="col-lg-6 mt-5 ">
@@ -326,18 +344,18 @@
                     <h2 class="mt-4 text-center" id="goals">My goals for the future are clear...</h2>
                     <div class="col-lg-4 mb-4">
                         <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/057/221/original/Projekt-bez-tytulu-%283%29-transformed.png?1670525899"
-                            class="img-fluid mt-4 rounded mx-auto goals d-none d-md-block" alt="Food" />
+                            class="img-fluid mt-4 rounded mx-auto goals d-sm-block" alt="Food" />
                         <h2 class="mt-4 text-center">... more food</h2>
                     </div>
                     <div class="col-lg-4 mt-4">
                         <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/057/222/original/Projekt-bez-tytulu-%282%29-transformed.png?1670526091"
-                            class="img-fluid mt-4 rounded mx-auto goals d-none d-md-block" alt="Toys" />
+                            class="img-fluid mt-4 rounded mx-auto goals  d-sm-block" alt="Toys" />
                         <h2 class="mt-4 text-center">... more toys</h2>
 
                     </div>
                     <div class="col-lg-4 mt-4">
                         <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/057/226/original/1.png?1670526453"
-                            class="img-fluid mt-4 rounded mx-auto goals d-none d-md-block" alt="Friends" />
+                            class="img-fluid mt-4 rounded mx-auto goals d-sm-block" alt="Friends" />
                         <h2 class="mt-4 text-center">... more friends</h2>
 
                     </div>
@@ -353,7 +371,7 @@
                     <div class="col-lg-6 mt-1 ">
                         <div class="col-lg-12 mx-auto ">
                             <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/057/229/original/Projekt-bez-tytulu-%286%29-transformed.png?1670526681"
-                                class="img-fluid rounded mx-auto granda-cloud d-none d-md-block" alt="Cloud-granda" />
+                                class="img-fluid rounded mx-auto granda-cloud  d-sm-block" alt="Cloud-granda" />
                         </div>
                     </div>
                     <div class="col-lg-6 mt-5 ">
